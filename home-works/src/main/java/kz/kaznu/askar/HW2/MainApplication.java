@@ -5,7 +5,7 @@ public class MainApplication {
 
     public static void main(String[] args) {
         // Тестируем методы
-        printStringNTimes(3, "Hello, братан!");
+        printStringNTimes(3, "Hello, everyone!");
 
         int[] arr1 = {1, 6, 8, 3, 10, 2};
         sumGreaterThanFive(arr1);
@@ -16,7 +16,7 @@ public class MainApplication {
         int[] arr3 = {2, 4, 6, 8, 10};
         increaseEachElement(3, arr3);
 
-        int[] arr4 = {1, 2, 3, 4, 5, 6, 7, 8};
+        int[] arr4 = {1, 2, 2, 1};
         compareHalves(arr4);
     }
 
