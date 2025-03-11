@@ -12,7 +12,7 @@ public class MainApplication4 {
         human.move(10, Terrain.PLAIN);
         human.move(3, Terrain.FOREST);
         human.leaveTransport();
-        human.takeTransport(bike  );
-        human.move(4, Terrain.RAVINE);
+        human.takeTransport(horse);
+        human.move(12, Terrain.PLAIN);
     }
 }

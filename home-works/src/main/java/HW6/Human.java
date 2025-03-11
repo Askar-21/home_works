@@ -3,6 +3,7 @@ package HW6;
 public class Human {
     private String name;
     private Transport currentTransport;
+    private int stamina = 100; // Стамина человека
 
     public Human(String name) {
         this.name = name;
@@ -24,8 +25,25 @@ public class Human {
         if (currentTransport != null) {
             return currentTransport.move(distance, terrain);
         } else {
-            System.out.println(name + " идет пешком " + distance + " км по " + terrain);
-            return true;
+            return walk(distance, terrain);
         }
+    }
+
+    private boolean walk(int distance, Terrain terrain) {
+        int staminaLoss = distance * 4; // 4% стамины за 1 км пешком
+
+        if (stamina >= staminaLoss) {
+            stamina -= staminaLoss;
+            System.out.println(name + " идет пешком " + distance + " км по " + terrain + ". Осталось сил: " + stamina + "%");
+            return true;
+        } else {
+            System.out.println(name + " слишком устал, чтобы идти пешком! Нужно отдохнуть.");
+            return false;
+        }
+    }
+
+    public void rest() {
+        stamina = 100;
+        System.out.println(name + " отдохнул и восстановил силы!");
     }
 }
